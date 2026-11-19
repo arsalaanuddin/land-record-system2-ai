@@ -1,0 +1,55 @@
+{
+  "state": "telangana",
+  "language": "te",
+  "version": 1,
+  "document_types": {
+    "pahani": {
+      "display_name": "Pahani / Record of Rights (Telangana)",
+      "aliases": ["pahani", "pahani patrika", "record of rights", "ror"],
+      "title_keywords_en": ["pahani", "record of rights", "village account"],
+      "title_keywords_te": ["పహాణీ", "భూమి హక్కుల పట్టా"],
+      "required_fields": ["survey_number", "owner_name", "area", "village"],
+      "optional_fields": ["khata_number", "land_classification", "district", "mandal"]
+    },
+    "ror_1b": {
+      "display_name": "ROR-1B (Telangana)",
+      "aliases": ["1b", "ror 1b", "form 1b"],
+      "title_keywords_en": ["1-b", "1b", "ror"],
+      "title_keywords_te": ["1-బి"],
+      "required_fields": ["survey_number", "owner_name", "area"],
+      "optional_fields": ["khata_number", "village", "mandal", "district"]
+    },
+    "pattadar_passbook": {
+      "display_name": "Pattadar Passbook",
+      "aliases": ["pattadar passbook", "patta passbook", "pattadar"],
+      "title_keywords_en": ["pattadar", "passbook", "patta"],
+      "title_keywords_te": ["పట్టాదారు పాస్‌బుక్", "పట్టా"],
+      "required_fields": ["owner_name", "khata_number", "survey_number", "area"],
+      "optional_fields": ["village", "mandal", "district"]
+    },
+    "sale_deed": {
+      "display_name": "Sale Deed (SRO)",
+      "aliases": ["sale deed", "conveyance deed", "registration"],
+      "title_keywords_en": ["sale deed", "conveyance", "sub-registrar"],
+      "title_keywords_te": ["అమ్మకం పత్రం"],
+      "required_fields": ["owner_name", "survey_number", "area", "registration_number"],
+      "optional_fields": ["mutation_number", "district"]
+    },
+    "mutation_register": {
+      "display_name": "Mutation Register",
+      "aliases": ["mutation", "mutation register", "mutka"],
+      "title_keywords_en": ["mutation", "mutka"],
+      "title_keywords_te": ["మ్యుటేషన్"],
+      "required_fields": ["mutation_number", "survey_number", "owner_name"],
+      "optional_fields": ["area", "village"]
+    },
+    "other": {
+      "display_name": "Other / Unclassified",
+      "aliases": [],
+      "title_keywords_en": [],
+      "title_keywords_te": [],
+      "required_fields": [],
+      "optional_fields": []
+    }
+  }
+}

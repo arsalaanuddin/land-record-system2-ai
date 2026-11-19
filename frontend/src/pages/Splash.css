@@ -1,0 +1,119 @@
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #f8fbff 0%, #e8f4fc 100%); /* Very light blue on white background */
+  position: relative;
+  overflow: hidden;
+  color: #333;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.tick-wrapper {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4); /* Golden glow */
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.golden-tick {
+  color: #d4af37; /* Golden color */
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawTick 1.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.splash-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #0d47a1; /* Dark blue text */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.splash-footer {
+  position: absolute;
+  bottom: 10%;
+  z-index: 10;
+  animation: fadeInBottom 1s ease-out forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.capsule-btn {
+  background: #d4af37; /* Golden */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 50px; /* Capsule shape */
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.capsule-btn:hover {
+  background: #f1c40f;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes drawTick {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.6);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

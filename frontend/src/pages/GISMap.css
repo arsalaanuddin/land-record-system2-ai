@@ -1,0 +1,200 @@
+.map-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.map-toolbar-card {
+  padding: 0.75rem 1rem;
+}
+
+.map-toolbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-chips-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkbox-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-main);
+  cursor: pointer;
+  background: #f1f3f5;
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+}
+
+.checkbox-chip input {
+  accent-color: var(--primary-color);
+}
+
+.map-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.color-dot.verified {
+  background: #2e7d32;
+}
+
+.color-dot.review {
+  background: #f57f17;
+}
+
+.color-dot.selected {
+  background: #2563eb;
+}
+
+.map-layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 1080px) {
+  .map-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.map-container-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.parcel-inspector-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+
+.inspector-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.inspector-header h3 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.inspector-top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.inspector-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.inspector-field label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.15rem;
+}
+
+.inspector-field .field-value {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.inspector-field .field-value.primary {
+  font-size: 1.15rem;
+  color: var(--text-main);
+}
+
+.field-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.inspector-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  background: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.jur-text {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--text-main);
+}
+
+.field-sub-value {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.inspector-actions {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.empty-inspector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 1.5rem;
+}
+
+.gis-popup-content h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #111;
+}
+
+.gis-popup-content p {
+  font-size: 0.8rem;
+  margin: 0.15rem 0;
+  color: #444;
+}

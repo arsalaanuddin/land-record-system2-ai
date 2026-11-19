@@ -1,0 +1,119 @@
+{
+  "state": "telangana",
+  "language": "te",
+  "version": 1,
+  "notes": "Label variants and value patterns for Telangana revenue documents. Patterns are searched on OCR lines after the label; no value is produced when a pattern does not match.",
+  "fields": {
+    "survey_number": {
+      "label_en": "Survey Number",
+      "label_te": "సర్వే నంబరు",
+      "category": "core",
+      "value_type": "identifier",
+      "ui_label": "Survey / Gat Number",
+      "labels": ["survey no", "survey number", "sy no", "sy. no", "s.no", "survey", "సర్వే నంబరు", "సర్వే నంబర్", "సర్వే నం", "సర్వే నెం", "సర్వే", "గట్ నంబరు"],
+      "pattern": "([0-9]{1,4}(?:\\s*[/\\-]\\s*[0-9A-Za-zఀ-౿]{1,4})?)",
+      "normalise": "strip_spaces"
+    },
+    "khata_number": {
+      "label_en": "Khata Number",
+      "label_te": "ఖాతా నంబరు",
+      "category": "core",
+      "value_type": "identifier",
+      "ui_label": "Khata Number",
+      "labels": ["khata no", "khata number", "khata", "ఖాతా నంబరు", "ఖాతా"],
+      "pattern": "([0-9]{1,8})",
+      "normalise": "digits"
+    },
+    "khasra_number": {
+      "label_en": "Khasra Number",
+      "label_te": "ఖసరా నంబరు",
+      "category": "core",
+      "value_type": "identifier",
+      "ui_label": "Khasra Number",
+      "labels": ["khasra no", "khasra number", "khasra", "ఖసరా"],
+      "pattern": "([0-9]{1,6}(?:\\s*/\\s*[0-9]{1,6})?)",
+      "normalise": "strip_spaces"
+    },
+    "owner_name": {
+      "label_en": "Pattadar Name",
+      "label_te": "పట్టాదారు పేరు",
+      "category": "ownership",
+      "value_type": "name",
+      "ui_label": "Primary Landowner Name",
+      "labels": ["pattadar name", "owner name", "name of pattadar", "land owner", "పట్టాదారు పేరు", "భూమి యజమాని"],
+      "pattern": "([^0-9:;|]{2,60})",
+      "normalise": "collapse_spaces"
+    },
+    "area": {
+      "label_en": "Extent / Area",
+      "label_te": "విస్తీర్ణం",
+      "category": "classification",
+      "value_type": "area",
+      "ui_label": "Total Land Extent / Area",
+      "labels": ["extent", "area", "total area", "విస్తీర్ణం", "విస్తీర్ణ", "ఎకరాలు"],
+      "pattern": "([0-9]{1,6}(?:\\.[0-9]{1,4})?\\s*(?:acre|acres|hectare|hectares|gunta|guntas|sq\\.?\\s*m|చదరపు మీటర్లు|ఎకరాలు|హెక్టార్లు)?)",
+      "unit_pattern": "(?P<value>[0-9]{1,6}(?:\\.[0-9]{1,4})?)\\s*(?P<unit>ఎకరాలు|ఎకరం|ఎకరా|హెక్టార్లు|హెక్టారు|acres|acre|hectares|hectare|guntas|gunta)",
+      "normalise": "collapse_spaces"
+    },
+    "village": {
+      "label_en": "Village",
+      "label_te": "గ్రామం",
+      "category": "location",
+      "value_type": "text",
+      "ui_label": "Village",
+      "labels": ["village", "gramam", "గ్రామం"],
+      "pattern": "([A-Za-zఀ-౿\\s.]{2,60})",
+      "normalise": "collapse_spaces"
+    },
+    "mandal": {
+      "label_en": "Mandal",
+      "label_te": "మండలం",
+      "category": "location",
+      "value_type": "text",
+      "ui_label": "Mandal",
+      "labels": ["mandal", "taluk", "tehsil", "మండలం"],
+      "pattern": "([A-Za-zఀ-౿\\s.]{2,60})",
+      "normalise": "collapse_spaces"
+    },
+    "district": {
+      "label_en": "District",
+      "label_te": "జిల్లా",
+      "category": "location",
+      "value_type": "text",
+      "ui_label": "Revenue District",
+      "labels": ["district", "జిల్లా"],
+      "pattern": "([A-Za-zఀ-౿\\s.]{2,60})",
+      "normalise": "collapse_spaces"
+    },
+    "land_classification": {
+      "label_en": "Land Classification",
+      "label_te": "భూమి రకం",
+      "category": "classification",
+      "value_type": "text",
+      "ui_label": "Land Classification",
+      "labels": ["classification", "land type", "భూమి రకం"],
+      "pattern": "([A-Za-zఀ-౿\\s.]{2,60})",
+      "normalise": "collapse_spaces"
+    },
+    "mutation_number": {
+      "label_en": "Mutation Number",
+      "label_te": "మ్యుటేషన్ నంబరు",
+      "category": "mutation",
+      "value_type": "identifier",
+      "ui_label": "Mutation Number",
+      "labels": ["mutation no", "mutation number", "mutation", "మ్యుటేషన్ నంబరు"],
+      "pattern": "([A-Za-z0-9/\\-]{2,30})",
+      "normalise": "strip_spaces"
+    },
+    "registration_number": {
+      "label_en": "Registration Number",
+      "label_te": "నమోదు నంబరు",
+      "category": "registration",
+      "value_type": "identifier",
+      "ui_label": "Registration Deed No.",
+      "labels": ["document no", "registration no", "deed no", "నమోదు నంబరు"],
+      "pattern": "([A-Za-z0-9/\\-]{2,30})",
+      "normalise": "strip_spaces"
+    }
+  }
+}

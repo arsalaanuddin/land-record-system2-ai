@@ -1,0 +1,33 @@
+# --- Core API ---
+fastapi>=0.110
+uvicorn[standard]>=0.27
+python-multipart>=0.0.9
+pydantic>=2.5
+
+# --- Persistence (PostgreSQL in deployment, SQLite locally) ---
+SQLAlchemy>=2.0
+psycopg2-binary>=2.9 ; platform_system != "Darwin"
+
+# --- Document handling / imaging ---
+PyMuPDF>=1.23
+opencv-python-headless>=4.9
+numpy>=1.26
+Pillow>=10.2
+
+# --- OCR (heavy; required for printed-text extraction) ---
+# PaddleOCR 3.x API (predict + rec_texts/rec_scores/rec_polys payload).
+# A Telugu recogniser (te_PP-OCRv5_mobile_rec) is downloaded on first use.
+# Model selection is runtime-configurable, see ocr/printed_ocr.py:
+#   LRS_PADDLE_DET_MODEL, LRS_PADDLE_REC_MODEL, LRS_PADDLE_MKLDNN
+# oneDNN is disabled by default; its kernels crash on some CPU-only hosts.
+paddlepaddle>=3.3,<4
+paddleocr>=3.7,<4
+
+# --- Optional model backends, enabled per phase ---
+# transformers>=4.40
+# torch>=2.2
+# fasttext-wheel>=0.9
+
+# --- Tests ---
+pytest>=8.0
+httpx>=0.27

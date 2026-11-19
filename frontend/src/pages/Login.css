@@ -1,0 +1,163 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at top, rgba(212, 175, 55, 0.12), var(--bg-main) 70%);
+  padding: var(--spacing-xl);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 580px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.login-logo {
+  display: inline-flex;
+  padding: var(--spacing-md);
+  background: rgba(212, 175, 55, 0.12);
+  border-radius: 50%;
+  margin-bottom: var(--spacing-sm);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.login-header h1 {
+  font-size: 1.85rem;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.portal-sub {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.gov-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(46, 125, 50, 0.1);
+  color: var(--success-color);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  text-align: left;
+}
+
+.role-selection-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.role-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.role-option-card {
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-surface);
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  text-align: left;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.role-option-card:hover {
+  border-color: var(--primary-color);
+  background: #fdfbf7;
+}
+
+.role-option-card.active {
+  border-color: var(--primary-color);
+  background: rgba(212, 175, 55, 0.08);
+  box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+.role-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.role-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.role-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.25;
+}
+
+.active-icon {
+  color: var(--primary-color);
+}
+
+.role-auth-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8f9fa;
+  border-left: 3px solid var(--primary-color);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.input-with-icon .input-field {
+  padding-left: 2.75rem;
+  width: 100%;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.85rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
